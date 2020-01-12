@@ -1,0 +1,31 @@
+{
+  "name": "tailwindcss-browser",
+  "version": "1.1.4",
+  "main": "dist/tailwindcss-browser.js",
+  "repository": "https://github.com/mapgrid/tailwindcss-browser",
+  "author": "MapGrid <no-reply@mapgrid.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^3.4.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.18.2",
+    "postcss": "^7.0.26",
+    "prettier": "^1.19.1",
+    "tailwindcss": "^1.1.4",
+    "to-string-loader": "^1.1.6",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "build": "webpack --mode=production",
+    "format": "prettier --write \"**/*.js\"",
+    "lint": "eslint .",
+    "prepublishOnly": "yarn run lint",
+    "preversion": "yarn run lint"
+  },
+  "files": [
+    "dist/**/*"
+  ]
+}
