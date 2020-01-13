@@ -17,7 +17,9 @@
 import { postcss, tailwind } from 'tailwindcss-browser'
 
 postcss([
-    tailwind()
+    tailwind({
+        // Tailwind CSS config
+    })
 ]).process(`
     @tailwind base;
     @tailwind components;
