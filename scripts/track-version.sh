@@ -7,3 +7,4 @@ if [[ "$VERSION" == "$UPSTREAM" ]]; then
 fi
 
 yarn version --new-version "$UPSTREAM"
+yarn publish --new-version "$UPSTREAM"
