@@ -23,7 +23,8 @@
     "format": "prettier --write \"**/*.js\"",
     "lint": "eslint .",
     "prepublishOnly": "yarn run lint",
-    "preversion": "yarn run lint"
+    "preversion": "yarn run lint",
+    "track": "./scripts/track-version.sh"
   },
   "files": [
     "dist/**/*"
