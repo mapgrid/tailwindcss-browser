@@ -8,7 +8,7 @@ module.exports = {
         filename: 'tailwindcss-browser.js',
         library: '',
         libraryExport: 'default',
-        libraryTarget: 'commonjs-module',
+        libraryTarget: 'commonjs2',
     },
     module: {
         rules: [
