@@ -14,15 +14,33 @@
 ## Documentation
 
 ```js
-import tailwind from 'tailwindcss-browser'
+import { postcss, tailwind } from 'tailwindcss-browser'
 
-tailwind({
-    // Tailwind Config
+postcss([
+    tailwind()
+]).process(`
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+`, {
+    from: undefined,
+}).then(result => {
+    console.log(result.css)
+})
+```
+
+With helper function `configure` to generate CSS directly:
+
+```js
+import { configure } from 'tailwindcss-browser'
+
+configure({
+    // Tailwind CSS config
 })(`
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
 `).then(result => {
-    result.css
+    console.log(result.css)
 })
 ```

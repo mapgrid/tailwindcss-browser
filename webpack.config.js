@@ -6,9 +6,9 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'tailwindcss-browser.js',
-        library: 'tailwind',
-        libraryTarget: 'umd',
-        globalObject: 'this',
+        library: '',
+        libraryExport: 'default',
+        libraryTarget: 'commonjs-module',
     },
     module: {
         rules: [

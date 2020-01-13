@@ -1,5 +1,11 @@
-import postcss from 'postcss'
 import tailwind from 'tailwindcss'
+import postcss from 'postcss'
 
-export const configure = config => css =>
+const configure = config => css =>
     postcss([tailwind(config)]).process(css, { from: undefined })
+
+export default {
+    tailwind,
+    postcss,
+    configure,
+}
