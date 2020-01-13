@@ -24,6 +24,7 @@
     "lint": "eslint .",
     "prepublishOnly": "yarn run lint",
     "preversion": "yarn run lint",
+    "postversion": "git push && git push --tags",
     "track": "./scripts/track-version.sh"
   },
   "files": [
