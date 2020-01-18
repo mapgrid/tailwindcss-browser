@@ -14,7 +14,8 @@
 ## Documentation
 
 ```js
-import { postcss, tailwind } from 'tailwindcss-browser'
+import postcss from 'postcss-browser'
+import tailwind from 'tailwindcss-browser'
 
 postcss([
     tailwind({
@@ -27,22 +28,6 @@ postcss([
 `, {
     from: undefined,
 }).then(result => {
-    console.log(result.css)
-})
-```
-
-With helper function `configure` to generate CSS directly:
-
-```js
-import { configure } from 'tailwindcss-browser'
-
-configure({
-    // Tailwind CSS config
-})(`
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-`).then(result => {
     console.log(result.css)
 })
 ```
